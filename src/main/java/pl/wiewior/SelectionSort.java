@@ -1,5 +1,7 @@
 package pl.wiewior;
 
+import java.util.Random;
+
 public class SelectionSort {
 
     public static int[] sort(int[] tab) {
