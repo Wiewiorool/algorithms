@@ -1,6 +1,6 @@
 package pl.wiewior;
 
-import static pl.wiewior.SelectionSort.bubbleSort;
+import static pl.wiewior.BubbleSort.bubbleSort;
 import static pl.wiewior.SelectionSort.sort;
 
 public class Main {
