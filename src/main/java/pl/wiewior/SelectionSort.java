@@ -1,7 +1,7 @@
 package pl.wiewior;
 
 
-public class SelectionSort extends Swap {
+public class SelectionSort {
 
     public static int[] sort(int[] tab) {
 
@@ -14,7 +14,7 @@ public class SelectionSort extends Swap {
                     minIndex = j;
                 }
             }
-            swap(tab, i, minIndex);
+            Swap.swap(tab, i, minIndex);
 
         }
         return tab;
