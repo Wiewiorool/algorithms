@@ -5,7 +5,7 @@ import static pl.wiewior.SelectionSort.sort;
 
 public class Main {
     public static void main(String[] args) {
-        int[] tab = {4, 2, 3, 55, 62, 13, 45, 999};
+        /*int[] tab = {4, 2, 3, 55, 62, 13, 45, 999};
         int[] sorted = sort(tab);
 
         for (int num : sorted) {
@@ -25,9 +25,9 @@ public class Main {
             //System.out.print(+num + ", ");
 
 
-        }
+        }*/
         //generating random array
-        int[] randTab = RandomTab.generateRandomTab(10_000);
+        int[] randTab = RandomTab.generateRandomTab(100);
 
         long start = System.nanoTime();
 
