@@ -5,8 +5,11 @@ import java.util.Arrays;
 public class Recursion {
 
     public static void main(String[] args) {
-        int[] tab = {123, 3, 4, 5, 6, 7};
+        int[] tab = RandomTab.generateRandomTab(100);
         homeWork();
+        QuickSort.quickSort(tab, tab[0], tab[99]);
+
+        System.out.println(binarySearch(tab, 200));
 
     }
 
@@ -36,5 +39,29 @@ public class Recursion {
         }
         System.out.println("Suma tablicy intów o długości 10: " + sum);
 
+    }
+
+    public static int binarySearch(int[] tab, int searchNum) {
+
+        int startIndex = 0;
+        int endIndex = tab.length - 1;
+        int middleIndex = (startIndex + endIndex) / 2;
+
+        while (startIndex < tab.length && 0 <= endIndex && startIndex <= endIndex) {
+            int middleElement = tab[middleIndex];
+            if (middleElement == searchNum) {
+                return middleIndex;
+            }
+            if (searchNum < middleElement) {
+                endIndex = middleIndex - 1;
+                middleIndex = (startIndex + endIndex) / 2;
+            } else {
+                startIndex = middleIndex + 1;
+                middleIndex = (startIndex + endIndex) / 2;
+            }
+        }
+
+
+        return -1;
     }
 }
