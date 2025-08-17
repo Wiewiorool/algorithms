@@ -1,5 +1,8 @@
 package pl.wiewior;
 
+import java.util.Arrays;
+
+import static pl.wiewior.MergeSort.merge;
 import static pl.wiewior.SelectionSort.sort;
 
 public class Main {
@@ -35,11 +38,26 @@ public class Main {
         long end = System.nanoTime();
         long duration = end - start;
         System.out.println("Czas sortowania tabeli: " + duration);
-        */
+        *//*
         InsertSort.insertionSort(tab);
         System.out.println();
         for (int num : tab) {
             System.out.print(+num + ", ");
-        }
+        }*/
+        int[] pink = new int[]{1, 3, 5};
+        int[] blue = new int[]{0, 2, 6};
+        System.out.println(Arrays.toString(merge(pink, blue)));
+
+        int[] red = new int[]{1, 2, 3, 8, 9, 10, 11, 12};
+        int[] white = new int[]{2, 5, 6};
+
+        System.out.println(Arrays.toString(merge(red, white)));
+
+        int[] one = new int[]{1};
+        int[] two = new int[]{2, 5, 6};
+        System.out.println(Arrays.toString(merge(one, two)));
+
+
     }
+
 }
