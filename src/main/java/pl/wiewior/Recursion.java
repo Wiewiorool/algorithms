@@ -9,7 +9,11 @@ public class Recursion {
         homeWork();
         QuickSort.quickSort(tab, tab[0], tab[99]);
 
+        //hw 3
         System.out.println(binarySearch(tab, 200));
+
+        //hw 4
+        System.out.println("silnia " + factorial(5));
 
     }
 
@@ -60,8 +64,17 @@ public class Recursion {
                 middleIndex = (startIndex + endIndex) / 2;
             }
         }
-
-
         return -1;
+    }
+
+    public static int factorial(int n) {
+        int num = 1;
+
+        for (int i = 1; i <= n; i++) {
+            num = num * i;
+
+        }
+        return num;
+
     }
 }
