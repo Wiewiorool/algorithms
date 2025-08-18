@@ -44,6 +44,8 @@ public class Main {
         for (int num : tab) {
             System.out.print(+num + ", ");
         }*/
+
+        //Zadanie 2
         int[] pink = new int[]{1, 3, 5};
         int[] blue = new int[]{0, 2, 6};
         System.out.println(Arrays.toString(merge(pink, blue)));
