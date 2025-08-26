@@ -19,9 +19,12 @@ public class Recursion {
 
         System.out.println("Bin " + toBinaryRec(7, ""));
 
-        QuickSort.recQuickSort(arr, 0, arr.length - 1);
+        /*QuickSort.recQuickSort(arr, 0, arr.length - 1);
 
-        System.out.println("Quicksort recursion with pivot on middle: " + Arrays.toString(arr));
+        System.out.println("Quicksort recursion with pivot on middle: " + Arrays.toString(arr));*/
+
+        arr = MergeSort.recMergeSort(arr);
+        System.out.println("MergeSort rec: " + Arrays.toString(arr));
     }
 
     public static void printRecursion(int[] tab, int i) {
