@@ -2,6 +2,7 @@ package pl.wiewior;
 
 import java.util.Arrays;
 
+import static pl.wiewior.BubbleSort.bubbleSort;
 import static pl.wiewior.MergeSort.merge;
 import static pl.wiewior.SelectionSort.sort;
 
@@ -10,7 +11,7 @@ public class Main {
         int[] tab = {14, 9, 6, 3, 2, 7, 0};
         int[] sorted = sort(tab);
 
-   /*     for (int num : sorted) {
+        for (int num : sorted) {
             //System.out.print(num + ", ");
         }
 
@@ -24,10 +25,10 @@ public class Main {
         int[] sortedTab4 = bubbleSort(tab4);
         System.out.println("Bubble: ");
         for (int num : sortedTab4) {
-            //System.out.print(+num + ", ");*/
+            System.out.print(+num + ", ");
 
 
-   /*     //generating random array
+            //generating random array
         }
         int[] randTab = RandomTab.generateRandomTab(100);
 
@@ -38,12 +39,12 @@ public class Main {
         long end = System.nanoTime();
         long duration = end - start;
         System.out.println("Czas sortowania tabeli: " + duration);
-        *//*
+
         InsertSort.insertionSort(tab);
         System.out.println();
         for (int num : tab) {
             System.out.print(+num + ", ");
-        }*/
+        }
 
         //Zadanie 2
         int[] pink = new int[]{1, 3, 5};
