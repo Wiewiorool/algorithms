@@ -6,15 +6,22 @@ public class Recursion {
 
     public static void main(String[] args) {
         int[] tab = RandomTab.generateRandomTab(100);
-        homeWork();
-        QuickSort.quickSort(tab, tab[0], tab[99]);
+
+        int[] arr = {5, 4, 3, 2, 1};
 
         //hw 3
         System.out.println(binarySearch(tab, 200));
 
         //hw 4
-        System.out.println("silnia " + factorial(5));
+        System.out.println("silnia iteracyjnie " + factorial(10));
 
+        System.out.println("silnia rekurencyjnie " + recFactorial(10, 1));
+
+        System.out.println("Bin " + toBinaryRec(7, ""));
+
+        QuickSort.recQuickSort(arr, 0, arr.length - 1);
+
+        System.out.println("Quicksort recursion with pivot on middle: " + Arrays.toString(arr));
     }
 
     public static void printRecursion(int[] tab, int i) {
@@ -67,6 +74,14 @@ public class Recursion {
         return -1;
     }
 
+    public static String toBinaryRec(int n, String result) {
+        if (n == 1) return "1";
+        if (n == 0) return "0";
+
+        return toBinaryRec(n / 2, result) + (n % 2);
+
+    }
+
     public static int factorial(int n) {
         int num = 1;
 
@@ -77,4 +92,16 @@ public class Recursion {
         return num;
 
     }
+
+    //recFactorial(6,1)
+    public static int recFactorial(int n, int i) {
+        if (n == i) {
+            return n;
+        } else {
+            return i * recFactorial(n, ++i);
+        }
+
+    }
+
+
 }
