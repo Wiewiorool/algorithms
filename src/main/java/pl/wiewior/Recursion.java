@@ -1,5 +1,6 @@
 package pl.wiewior;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Recursion {
@@ -19,12 +20,14 @@ public class Recursion {
 
         System.out.println("Bin " + toBinaryRec(7, ""));
 
-        /*QuickSort.recQuickSort(arr, 0, arr.length - 1);
+        QuickSort.recQuickSort(arr, 0, arr.length - 1);
 
-        System.out.println("Quicksort recursion with pivot on middle: " + Arrays.toString(arr));*/
+        System.out.println("Quicksort recursion with pivot on middle: " + Arrays.toString(arr));
 
         arr = MergeSort.recMergeSort(arr);
         System.out.println("MergeSort rec: " + Arrays.toString(arr));
+
+
     }
 
     public static void printRecursion(int[] tab, int i) {
@@ -106,5 +109,18 @@ public class Recursion {
 
     }
 
+    public static void dfsRec(int node, boolean visited[],
+                              ArrayList<ArrayList<Integer>> adjustment,
+                              ArrayList<Integer> ls) {
+        visited[node] = true;
+        ls.add(node);
 
+
+        for (Integer neighbor : adjustment.get(node)) {
+            if (!visited[neighbor]) {
+                dfsRec(node, visited, adjustment, ls);
+
+            }
+        }
+    }
 }
