@@ -106,21 +106,5 @@ public class Recursion {
         } else {
             return i * recFactorial(n, ++i);
         }
-
-    }
-
-    public static void dfsRec(int node, boolean visited[],
-                              ArrayList<ArrayList<Integer>> adjustment,
-                              ArrayList<Integer> ls) {
-        visited[node] = true;
-        ls.add(node);
-
-
-        for (Integer neighbor : adjustment.get(node)) {
-            if (!visited[neighbor]) {
-                dfsRec(node, visited, adjustment, ls);
-
-            }
-        }
     }
 }
