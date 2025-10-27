@@ -60,6 +60,12 @@ public class Main {
         int[] two = new int[]{2, 5, 6};
         System.out.println(Arrays.toString(merge(one, two)));
 
+        System.out.println("DFS ");
+        Node.dfs(NodeGraph.binaryTree3Levels());
+        System.out.println("BFS ");
+        Node.bfs(NodeGraph.binaryTree3Levels());
+
+
 
     }
 
