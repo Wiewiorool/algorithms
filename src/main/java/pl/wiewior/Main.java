@@ -66,7 +66,7 @@ public class Main {
         Node.bfs(NodeGraph.binaryTree3Levels());
 
         int[][] graph = NodeGraph.directedGraph();
-        Djikstra.dijkstra(graph);
+        Dijkstra.dijkstra(graph);
 
         System.out.println("Shortest paths from vertex 0:");
         for (int i = 0; i < graph.length; i++) {
