@@ -65,8 +65,15 @@ public class Main {
         System.out.println("BFS ");
         Node.bfs(NodeGraph.binaryTree3Levels());
 
+        int[][] graph = NodeGraph.directedGraph();
+        Djikstra.dijkstra(graph);
 
+        System.out.println("Shortest paths from vertex 0:");
+        for (int i = 0; i < graph.length; i++) {
+            System.out.println("To " + i + ": distance=" + graph[0][i]);
+
+
+        }
 
     }
-
 }
