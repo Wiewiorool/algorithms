@@ -3,7 +3,7 @@ package pl.wiewior;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Djikstra {
+public class Dijkstra {
 
     public static int[][] dijkstra(int[][] graph) {
         int length = graph.length;
