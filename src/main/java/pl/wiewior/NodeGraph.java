@@ -129,4 +129,65 @@ public class NodeGraph {
         Node node0 = new Node(node1, null, 0);
         return List.of(node0, node1, node2, node3);
     }
+    /**
+     *             (10)
+     *       0 ----------> 4
+     *      | \            ^
+     * (5)  |  \  (45)     |  (25)
+     *      |   \_______,  |
+     *      v           \  |
+     *      1 --> 2 -----> 3
+     *       (20)   (1)
+     */
+    public static int[][] directedGraph(){
+        int n = 5;
+        int[][] graph = new int[n][n];
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++) {
+                graph[i][j] = 0;
+            }
+        }
+        graph[0][1]=5;
+        graph[0][3]=45;
+        graph[0][4]=10;
+        graph[1][2]=20;
+        graph[2][3] =1;
+        graph[3][4]= 25;
+        return graph;
+    }
+    /**
+     *           (4)
+     *       1 ------,_________
+     *   (9) |       | (4)     |
+     *       |       |         |
+     *       |  (1)  |   (9)   |
+     *       2 ----- 3        4
+     *       |       |       |
+     *       |       | (2)   | (2)
+     *       |       |       |
+     *       '-----  5 ----- 0
+     *     (10)         (3)
+     *
+     */
+    public static int[][] notDirectedGraph(){
+        int n = 6;
+        int[][] graph = new int[n][n];
+        graph[0][4] = 2;
+        graph[0][5] = 3;
+        graph[1][2] = 9;
+        graph[1][3] = 0;
+        graph[2][1] = 9;
+        graph[2][3] = 1;
+        graph[2][5] = 10;
+        graph[3][1] = 4;
+        graph[3][2] = 1;
+        graph[3][4] = 9;
+        graph[3][5] = 2;
+        graph[4][0] = 2;
+        graph[4][3] = 9;
+        graph[5][0] = 3;
+        graph[5][2] = 10;
+        graph[5][3] = 2;
+        return graph;
+    }
 }
