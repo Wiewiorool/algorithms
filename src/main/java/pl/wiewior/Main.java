@@ -67,13 +67,8 @@ public class Main {
 
         int[][] graph = NodeGraph.directedGraph();
         Dijkstra.dijkstra(graph);
+        System.out.println(Arrays.deepToString(graph));
 
-        System.out.println("Shortest paths from vertex 0:");
-        for (int i = 0; i < graph.length; i++) {
-            System.out.println("To " + i + ": distance=" + graph[0][i]);
-
-
-        }
 
     }
 }
