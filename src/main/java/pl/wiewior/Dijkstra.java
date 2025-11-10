@@ -28,12 +28,11 @@ public class Dijkstra {
             //update cost
             for (int column = 0; column < length; column++) {
                 if (graph[0][column] != 0) {
-                    int cost = graph[0][column];
+                    int cost = visited[index][0] + graph[index][column];
                     if (cost < visited[column][0]) {
                         visited[column][0] = cost;
                         visited[column][1] = index;
                     }
-
                 }
             }
             queue.remove((Integer) index);
