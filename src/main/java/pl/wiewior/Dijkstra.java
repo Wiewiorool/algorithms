@@ -27,7 +27,7 @@ public class Dijkstra {
 
             //update cost
             for (int column = 0; column < length; column++) {
-                if (graph[0][column] != 0) {
+                if (graph[index][column] != 0 && column != index) {
                     int cost = visited[index][0] + graph[index][column];
                     if (cost < visited[column][0]) {
                         visited[column][0] = cost;
