@@ -66,8 +66,8 @@ public class Main {
         Node.bfs(NodeGraph.binaryTree3Levels());
 
         int[][] graph = NodeGraph.directedGraph();
-        Dijkstra.dijkstra(graph);
-        System.out.println(Arrays.deepToString(graph));
+        int[][] shortPath = Dijkstra.dijkstra(graph);
+        System.out.println(Arrays.deepToString(shortPath));
 
 
     }
