@@ -69,6 +69,8 @@ public class Main {
         int[][] shortPath = Dijkstra.dijkstra(graph);
         System.out.println(Arrays.deepToString(shortPath));
 
+        Prim.prim(NodeGraph.notDirectedGraph());
+
 
     }
 }
