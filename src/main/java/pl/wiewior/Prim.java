@@ -21,6 +21,7 @@ public class Prim {
                 edges.add(newEdge);
             }
         }
+        unVisited.remove(start);
         while (!unVisited.isEmpty()) {
             int nextVertex = findSmallestCost(edges, unVisited);
             unVisited.remove(Integer.valueOf(nextVertex)); // do ogarnięcia
