@@ -7,9 +7,7 @@ public class Recursion {
 
     public static void main(String[] args) {
         int[] tab = RandomTab.generateRandomTab(100);
-
         int[] arr = {5, 4, 3, 2, 1};
-
         //hw 3
         System.out.println(binarySearch(tab, 200));
 
