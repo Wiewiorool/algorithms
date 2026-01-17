@@ -26,8 +26,6 @@ public class Recursion {
 
         arr = MergeSort.recMergeSort(arr);
         System.out.println("MergeSort rec: " + Arrays.toString(arr));
-
-
     }
 
     public static void printRecursion(int[] tab, int i) {
@@ -42,7 +40,6 @@ public class Recursion {
         for (int i = 0; i < tab.length; i++) {
             System.out.println(tab[i]);
         }
-
     }
 
     public static void homeWork() {
