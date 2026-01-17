@@ -26,8 +26,6 @@ public class Main {
         System.out.println("Bubble: ");
         for (int num : sortedTab4) {
             System.out.print(+num + ", ");
-
-
             //generating random array
         }
         int[] randTab = RandomTab.generateRandomTab(100);
