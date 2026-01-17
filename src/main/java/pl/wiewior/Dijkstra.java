@@ -36,7 +36,6 @@ public class Dijkstra {
                 }
             }
             queue.remove((Integer) index);
-
         }
         return visited;
     }

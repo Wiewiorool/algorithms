@@ -71,7 +71,6 @@ public class Main {
 
         Prim.prim(NodeGraph.notDirectedGraph());
 
-
         int[] robbery = {1, 2, 3, 1};
         System.out.println("HRMEMO = " + Hr.robMemo(robbery));
 
