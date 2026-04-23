@@ -75,7 +75,9 @@ public class Main {
         int[] robbery = {1, 2, 3, 1};
         System.out.println("HRMEMO = " + Hr.robMemo(robbery));
 
-        System.out.println("HR = " +Hr.robReccursion(robbery));
+        System.out.println("HR = " + Hr.robRecursion(robbery));
+
+        System.out.println("DP = "+ Hr.dpMemo(robbery));
 
     }
 }
